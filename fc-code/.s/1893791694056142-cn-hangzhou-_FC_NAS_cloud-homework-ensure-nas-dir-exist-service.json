@@ -1,0 +1,44 @@
+{
+  "statefulConfig": {
+    "serviceName": "_FC_NAS_cloud-homework-ensure-nas-dir-exist-service",
+    "description": "The current resource is automatically created by Serverless Devs to operate NAS and is associated with the function service resource [cloud-homework]. VERSION: b9f6ce0",
+    "role": "acs:ram::1893791694056142:role/aliyunfcdefaultrole",
+    "logConfig": {
+      "project": "",
+      "logstore": "",
+      "enableRequestMetrics": false,
+      "enableInstanceMetrics": false,
+      "logBeginRule": "None"
+    },
+    "serviceId": "07fa7070-2242-4730-8043-a276cc116085",
+    "createdTime": "2022-04-16T12:33:26Z",
+    "lastModifiedTime": "2022-04-17T07:47:15Z",
+    "vpcConfig": {
+      "vpcId": "vpc-bp1fen3dso2hewfevts8p",
+      "vSwitchIds": [
+        "vsw-bp1150y617cuilfio2er2"
+      ],
+      "securityGroupId": "sg-bp11wskyv63u9aahlzxn",
+      "role": "",
+      "anytunnelViaENI": null
+    },
+    "internetAccess": true,
+    "nasConfig": {
+      "userId": 10003,
+      "groupId": 10003,
+      "mountPoints": [
+        {
+          "serverAddr": "0d5494b519-lyc88.cn-hangzhou.nas.aliyuncs.com:/",
+          "mountDir": "/mnt/python3"
+        }
+      ]
+    },
+    "vendorConfig": null,
+    "tracingConfig": {
+      "type": null,
+      "params": null,
+      "jaegerConfig": null
+    },
+    "name": "_FC_NAS_cloud-homework-ensure-nas-dir-exist-service"
+  }
+}

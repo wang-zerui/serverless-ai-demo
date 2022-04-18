@@ -1,0 +1,44 @@
+edition: 1.0.0
+name: start-ai
+access: "ali"
+
+vars: # 全局变量
+  region: cn-hangzhou
+  service:
+    name: cloud-homework
+    nasConfig:                  # NAS配置, 配置后function可以访问指定NAS
+      userId: 10003             # userID, 默认为10003
+      groupId: 10003            # groupID, 默认为10003
+      mountPoints:              # 目录配置
+        - serverAddr: 0d5494b519-lyc88.cn-hangzhou.nas.aliyuncs.com # NAS 服务器地址
+          nasDir: /
+          fcDir: /mnt/python3
+    vpcConfig:
+      vpcId: vpc-bp1fen3dso2hewfevts8p
+      securityGroupId: sg-bp11wskyv63u9aahlzxn
+      vswitchIds:
+        - vsw-bp1150y617cuilfio2er2
+
+services:
+  image:
+    component:  fc
+    props: #  组件的属性值
+      region: ${vars.region}
+      service: ${vars.service}
+      function:
+        name: image_server
+        description: 图片处理服务
+        runtime: python3
+        codeUri: ./
+        handler: index.app
+        memorySize: 3072
+        timeout: 300
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT

@@ -1,0 +1,43 @@
+{
+  "statefulConfig": {
+    "functionId": "2a590574-fceb-45e6-8710-2b6b41216c9e",
+    "functionName": "image_server",
+    "description": "图片处理服务",
+    "runtime": "python3",
+    "handler": "index.app",
+    "timeout": 300,
+    "initializer": "",
+    "initializationTimeout": 3,
+    "codeSize": 37680068,
+    "codeChecksum": "15387954989973710536",
+    "memorySize": 3072,
+    "gpuMemorySize": null,
+    "environmentVariables": {},
+    "createdTime": "2022-04-15T03:53:43Z",
+    "lastModifiedTime": "2022-04-17T07:47:36Z",
+    "instanceConcurrency": 1,
+    "instanceSoftConcurrency": null,
+    "customContainerConfig": null,
+    "caPort": null,
+    "instanceType": "e1",
+    "layers": null,
+    "instanceLifecycleConfig": {
+      "preFreeze": {
+        "handler": "",
+        "timeout": 3
+      },
+      "preStop": {
+        "handler": "",
+        "timeout": 3
+      }
+    },
+    "customDNS": null,
+    "customRuntimeConfig": {
+      "command": [
+        "python3 index.py"
+      ],
+      "args": null
+    },
+    "name": "image_server"
+  }
+}

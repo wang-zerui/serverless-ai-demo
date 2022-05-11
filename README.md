@@ -1,24 +1,5 @@
-# antd-demo
+## 基于AnimeGANv2+serverless+NAS存储的漫画风图片生成工具
 
-## Project setup
-```
-yarn install
-```
+[demo](https://animegan.xinwuyun.cloud/)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+python依赖存储于阿里云NAS，一定程度缓解了在serverless框架中运行人工智能项目存在的代码包过大和冷启动时间过长的问题。
